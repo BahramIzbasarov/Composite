@@ -10,6 +10,10 @@ namespace Composite
     {
         static void Main(string[] args)
         {
+            Composite root = new Composite("folders");
+
+            root.Add(new Leaf("f1", 54));
+            
         }
     }
 }
