@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Composite
 {
@@ -10,10 +11,11 @@ namespace Composite
     {
         static void Main(string[] args)
         {
-            Composite root = new Composite("folders");
-
-            root.Add(new Leaf("f1", 54));
-            
+            Composite root = new Composite("C:\\Users\\izba_cr95\\Documents\\project");
+            foreach (var item in root.Files)
+            {
+                item.Display(1);
+            }
         }
     }
 }

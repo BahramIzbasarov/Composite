@@ -10,9 +10,8 @@ namespace Composite
 {
     class Leaf : Component
     {
-        private int size;
-
-        public Leaf(string name, int size) : base(name)
+        
+        public Leaf(string name, long size) : base(name)
         {
             this.name = name;
             this.size = size;
@@ -20,9 +19,9 @@ namespace Composite
 
         public override void Display(int depth)
         {
-            Console.WriteLine(new String('-', depth) + name);
+            Console.WriteLine(new String('-', depth) + name + "     " + size + "b");
         }
 
-        public int Size { get => size; set => size = value; }
+        
     }
 }

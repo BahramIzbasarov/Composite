@@ -9,6 +9,9 @@ namespace Composite
     abstract class Component
     {
         protected string name;
+        protected long size;
+
+        public long Size { get => size; set => size = value; }
 
         public Component(string name)
         {
@@ -16,5 +19,11 @@ namespace Composite
         }
 
         public abstract void Display(int depth);
+
+        public string Name
+        {
+            get => name;
+            set => name = value;
+        }
     }
 }
